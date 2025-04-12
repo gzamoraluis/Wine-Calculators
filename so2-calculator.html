@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SO₂ Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icons/barrel-192.png">
+    <meta name="theme-color" content="#4361ee">
+</head>
+<body>
+    <div class="container">
+        <nav class="app-nav">
+            <h1 id="appTitle">SO₂ Calculator</h1>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link" id="toppingLink">Topping Calculator</a>
+                <button class="toggle-btn" id="languageToggle">
+                    <span id="languageText">Español</span> 🌐
+                </button>
+            </div>
+        </nav>
+
+        <div class="form-group">
+            <label for="barrelType" id="barrelTypeLabel">Barrel Type:</label>
+            <select id="barrelType">
+                <option value="59">Standard Barrel (59 gal)</option>
+                <option value="118">Large Puncheon (118 gal)</option>
+                <option value="132">Puncheon (132 gal)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="ppm" id="ppmLabel">Target PPM of SO₂:</label>
+            <input type="number" id="ppm" min="0" placeholder="e.g., 30">
+        </div>
+
+        <div class="form-group">
+            <label for="so2Percent" id="so2PercentLabel">SO₂ Solution Percentage:</label>
+            <div class="input-with-suffix">
+                <input type="number" id="so2Percent" value="6" min="0.1" max="100" step="0.1">
+                <span>%</span>
+            </div>
+        </div>
+
+        <button class="calculate" id="calculateBtn">Calculate</button>
+
+        <div id="result" class="hidden">
+            <div class="result-item">
+                <strong id="so2AmountText">SO₂ to add:</strong> <span id="so2Amount"></span> mL
+            </div>
+            <div class="result-item">
+                <strong id="calculationText">Per barrel calculation:</strong>
+                <div id="calculationDetails"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/so2-calculator.js"></script>
+</body>
+</html>
