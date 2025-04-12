@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barrel Topping Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icons/barrel-192.png">
+    <meta name="theme-color" content="#4361ee">
+</head>
+<body>
+    <div class="container">
+        <nav class="app-nav">
+            <h1 id="appTitle">Barrel Topping Calculator</h1>
+            <div class="nav-links">
+                <a href="so2-calculator.html" class="nav-link" id="so2Link">SO₂ Calculator</a>
+                <button class="toggle-btn" id="languageToggle">
+                    <span id="languageText">Español</span> 🌐
+                </button>
+            </div>
+        </nav>
+
+        <div class="form-group">
+            <label for="gallons" id="gallonsLabel">Gallons used:</label>
+            <input type="number" id="gallons" step="0.01" min="0" placeholder="e.g., 3">
+        </div>
+
+        <div class="form-group">
+            <label for="barrelBatches" id="barrelsLabel">Barrel batches (comma-separated):</label>
+            <input type="text" id="barrelBatches" placeholder="e.g., 11, 3, 5">
+        </div>
+
+        <button class="calculate" id="calculateBtn">Calculate</button>
+
+        <div id="result" class="hidden">
+            <div class="result-item">
+                <strong id="totalBarrelsText">Total barrels:</strong> <span id="totalBarrels"></span>
+            </div>
+            <div class="result-item">
+                <strong id="perBarrelText">Gallons per barrel (unrounded):</strong> <span id="perBarrel"></span>
+            </div>
+            <h3 id="distributionTitle">Distribution per batch:</h3>
+            <div id="batchResults"></div>
+            <div class="subtraction-steps">
+                <h4 id="subtractionTitle">Subtraction Steps:</h4>
+                <div id="subtractionSteps"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/topping-calculator.js"></script>
+</body>
+</html>
