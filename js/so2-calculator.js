@@ -6,7 +6,7 @@ const texts = {
         barrelTypeLabel: "Barrel Type:",
         barrelTypes: {
             59: "Standard Barrel (59 gal)",
-            118: "Large Puncheon (118 gal)",
+            118: "Smaller Puncheon (118 gal)",
             132: "Puncheon (132 gal)"
         },
         ppmLabel: "Target PPM of SO₂:",
@@ -25,7 +25,7 @@ const texts = {
         barrelTypeLabel: "Tipo de barril:",
         barrelTypes: {
             59: "Barrica Estándar (59 gal)",
-            118: "Puncheon Grande (118 gal)",
+            118: "Puncheon chico (118 gal)",
             132: "Puncheon (132 gal)"
         },
         ppmLabel: "Objetivo de PPM de SO₂:",
